@@ -18,7 +18,7 @@ public class App
         properties.put("metadata.broker.list", "52.4.184.235:6667");
         properties.put("serializer.class", "kafka.serializer.StringEncoder");
         properties.put("request.required.acks", "1");
-        producer = new Producer<>(new ProducerConfig(properties));
+        producer = new Producer<Integer, String>(new ProducerConfig(properties));
     }
 
     public static void main(String[] args) {
