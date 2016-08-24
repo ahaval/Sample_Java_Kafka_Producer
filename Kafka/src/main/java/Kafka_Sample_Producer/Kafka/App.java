@@ -26,7 +26,7 @@ public class App
         String topic = "test";
         String msg = "Hello from Java";
         System.out.println(" Sending message ");
-        KeyedMessage<Integer, String> data = new KeyedMessage<>(topic, msg);
+        KeyedMessage<Integer, String> data = new KeyedMessage<Integer, String>(topic, msg);
         producer.send(data);
         System.out.println(" Sent message ");
         producer.close();
